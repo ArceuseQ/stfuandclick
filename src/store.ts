@@ -13,4 +13,10 @@ const logger = (store: any) => (next: any) => (action: any) => {
 };
 
 export const createAppStore = () =>
+  createStore(rootReducer, applyMiddleware(thunk.default));
+
+// For dev purposes only
+/*
+export const createAppStore = () =>
   createStore(rootReducer, applyMiddleware(thunk.default, logger));
+*/
