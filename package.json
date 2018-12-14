@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "author": "Filip Tes <filip@tesh.cz> (https://tesh.cz/)",
-  "homepage": "https://github.com/ArceuseQ/stfuandclick",
   "dependencies": {
     "axios": "^0.18.0",
     "path": "^0.12.7",
