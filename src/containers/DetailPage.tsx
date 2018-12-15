@@ -50,6 +50,7 @@ class DetailPage extends React.Component<DetailPageProps, DetailPageState> {
   }
 
   componentWillReceiveProps(nextProps) {
+    // If the active team is being loaded for the first time and session is set in nextProps => add first click to show team in Leaderboard
     if (
       nextProps.session !== null &&
       nextProps.session.teamClicks === 0 &&

@@ -26,6 +26,7 @@ export default class Leaderboard extends React.Component<
   }
 
   componentWillMount() {
+    // If the data is still being loaded => wait 1 second to show loader
     if (this.props.isFetching) {
       setTimeout(() => this.setState({ isLoading: true }), 1000);
     }
