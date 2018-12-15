@@ -36,13 +36,15 @@ class DetailPage extends React.Component<DetailPageProps, DetailPageState> {
   componentWillMount() {
     const team = this.props.match.params.team;
 
-    document.title = `${team} | STFU AND CLICK`;
     this.props.startSession(team);
     this.props.setSessionClicks();
     this.props.fetchLeaderboard(team);
   }
 
   componentDidMount() {
+    const team = this.props.match.params.team;
+    document.title = `${team} | STFU AND CLICK`;
+
     const timer = setInterval(
       () => this.props.fetchLeaderboard(this.props.match.params.team),
       500

@@ -19,10 +19,12 @@ interface HomePageState {
 
 class HomePage extends React.Component<HomePageProps, HomePageState> {
   componentWillMount() {
-    document.title = 'STFU AND CLICK';
     this.props.fetchLeaderboard();
   }
+
   componentDidMount() {
+    document.title = 'STFU AND CLICK';
+
     const timer = setInterval(() => this.props.fetchLeaderboard(), 500);
     this.setState({
       timer
@@ -32,6 +34,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
   componentWillUnmount() {
     clearInterval(this.state.timer);
   }
+
   render() {
     return (
       <>
