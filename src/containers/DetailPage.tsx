@@ -34,9 +34,12 @@ interface DetailPageState {
 
 class DetailPage extends React.Component<DetailPageProps, DetailPageState> {
   componentWillMount() {
-    this.props.startSession(this.props.match.params.team);
+    const team = this.props.match.params.team;
+
+    document.title = `${team} | STFU AND CLICK`;
+    this.props.startSession(team);
     this.props.setSessionClicks();
-    this.props.fetchLeaderboard(this.props.match.params.team);
+    this.props.fetchLeaderboard(team);
   }
 
   componentDidMount() {

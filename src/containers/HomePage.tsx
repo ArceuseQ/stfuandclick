@@ -19,6 +19,7 @@ interface HomePageState {
 
 class HomePage extends React.Component<HomePageProps, HomePageState> {
   componentWillMount() {
+    document.title = 'STFU AND CLICK';
     this.props.fetchLeaderboard();
   }
   componentDidMount() {
